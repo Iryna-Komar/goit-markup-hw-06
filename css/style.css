@@ -305,6 +305,7 @@ button {
     min-width: 528px;
     min-height: 581px;
     border-radius: 4px;
+    padding: 40px;
 
     background-color: var(--bg-color);
 
@@ -352,23 +353,26 @@ button {
   }
 
   .form-title{
-    font-weight: 700;
     font-size: 20px;
+    line-height: 1.15;
     text-align: center;
     color: var(--title-text-color);
 
-    margin: 40px 40px 12px 40px;
+    margin-bottom: 12px;
 
   }
   .input-group {
     display: flex;
     flex-direction: column;
-    margin: 12px 40px;
+    margin-bottom: 10px;
   }
 
+  .textarea-input-group {
+    margin-bottom: 20px;
+  }
 
   .input-modal {
-    width: 448px;
+    width: 100%;
     height: 40px;
     padding-right: 12px;
     padding-left: 42px;
@@ -383,8 +387,18 @@ button {
     cursor: pointer;
 
     transition-property: border;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  }
+
+  .modal-form-title {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: var(--text-color);
+    margin-bottom: 4px;
 
   }
 
@@ -405,11 +419,10 @@ button {
   }
 
   .textarea-modal {
-  
+    display: block;
     width: 100%;
     height: 120px;
-    resize: vertical;
-    max-height: 250px;
+    resize: none;
 
     padding: 12px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -433,22 +446,17 @@ button {
 
   .input-checkbox {
     display: flex;
-    width: 423px;
-    height: 24px;
-    margin: 20px 51px 30px 54px;
+    justify-content: center;
 
-    position: relative;
-    
+    margin-bottom: 30px;
   }
 
-  .input-modal:hover,
+
   .input-modal:focus,
-  .textarea-modal:hover,
   .textarea-modal:focus {
     border-color: var(--accent-color);
   }
 
-  .input-modal:hover + svg,
   .input-modal:focus + svg {
     fill: var(--accent-color);
   }
@@ -493,7 +501,6 @@ button {
       border-radius: 4px;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 40px;
   
       height: 50px;
       width: 200px;
@@ -865,14 +872,13 @@ button {
 
   .footer-btn{
     display: flex;
-    padding: 10px 32px;
+    padding: 10px 28px;
     border: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));;
     border-radius: 4px;
     margin-left: 12px;
 
     height: 50px;
-    padding: 28px;
     gap: 10px;
 
     Font-family: inherit;
